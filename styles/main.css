@@ -1,0 +1,45 @@
+/* 基础样式 */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 产品网格布局 */
+.product-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    width: 18%; /* 5列布局 */
+    min-width: 180px;
+    border: 1px solid #eaeaea;
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* 响应式适配 */
+@media (max-width: 768px) {
+    .product-card {
+        width: 48%; /* 小屏显示2列 */
+        margin-bottom: 20px;
+    }
+}
