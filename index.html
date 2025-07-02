@@ -1,29 +1,61 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh">
 <head>
-    <meta charset="UTF-8">
-    <title>公司名称 - 外贸出口</title>
-    <link rel="stylesheet" href="styles/main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>绍兴福临登纺织科技有限公司 | Shaoxing Freedom Textile 'Technology Co.,Ltd.</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="main.js"></script>
 </head>
 <body>
-    <header>
-        <img src="images/logo.png" alt="公司Logo" class="logo">
-        <nav>
-            <a href="index.html">首页</a>
-            <a href="about.html">公司简介</a>
-            <a href="products.html">产品展示</a>
-            <a href="contact.html">合作联系</a>
-        </nav>
-    </header>
-    
-    <section class="hero">
-        <h1>全球优质产品供应商</h1>
-        <p>专注外贸出口15年 | 服务全球100+国家</p>
-        <a href="products.html" class="cta-button">查看产品</a>
-    </section>
-    
-    <footer>
-        <p>© 2023 公司名称. 保留所有权利</p>
-    </footer>
+  <header>
+    <div class="container">
+      <div class="logo">绍兴福临登纺织科技有限公司<br><span class="en">Shaoxing Freedom Textile 'Technology Co.,Ltd.</span></div>
+      <nav>
+        <a href="#home" class="lang" data-zh="首页" data-en="Home">首页</a>
+        <a href="#about" class="lang" data-zh="公司简介" data-en="About Us">公司简介</a>
+        <a href="products.html" class="lang" data-zh="产品介绍" data-en="Products">产品介绍</a>
+        <a href="#contact" class="lang" data-zh="联系我们" data-en="Contact">联系我们</a>
+        <select id="lang-switch">
+          <option value="zh">中文</option>
+          <option value="en">English</option>
+        </select>
+      </nav>
+    </div>
+  </header>
+  <section class="hero" id="home">
+    <div class="carousel">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="纺织品1">
+      <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80" alt="纺织品2" style="display:none;">
+      <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=800&q=80" alt="纺织品3" style="display:none;">
+    </div>
+    <div class="hero-text">
+      <h1 class="lang" data-zh="优质纺织品供应商" data-en="Quality Textile Supplier">优质纺织品供应商</h1>
+      <p class="lang" data-zh="专注于国际纺织品贸易，致力于为全球客户提供高品质产品与服务。" data-en="Focus on international textile trade, committed to providing high-quality products and services to global customers.">专注于国际纺织品贸易，致力于为全球客户提供高品质产品与服务。</p>
+      <a href="products.html" class="btn lang" data-zh="了解产品" data-en="View Products">了解产品</a>
+    </div>
+  </section>
+  <section class="about" id="about">
+    <div class="container">
+      <h2 class="lang" data-zh="公司简介" data-en="About Us">公司简介</h2>
+      <p class="lang" data-zh="绍兴福临登纺织科技有限公司是一家专注于纺织品出口的外贸企业，主营棉布、毛巾、床上用品等。我们拥有丰富的行业经验和完善的供应链，产品远销欧美、中东、东南亚等地区。" data-en="Shaoxing Freedom Textile 'Technology Co.,Ltd. is a foreign trade company specializing in textile exports, mainly cotton fabrics, towels, bedding, etc. With rich industry experience and a complete supply chain, our products are exported to Europe, America, the Middle East, Southeast Asia and other regions.">XX纺织品有限公司是一家专注于纺织品出口的外贸企业，主营棉布、毛巾、床上用品等。我们拥有丰富的行业经验和完善的供应链，产品远销欧美、中东、东南亚等地区。</p>
+    </div>
+  </section>
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2 class="lang" data-zh="联系我们" data-en="Contact">联系我们</h2>
+      <p class="lang" data-zh="邮箱：2899285191@qq.com | 电话：+0086-15067508581" data-en="Email: 2899285191@qq.com | Tel: +0086-15067508581">邮箱：2899285191@qq.com | 电话：+0086-15067508581</p>
+      <p class="lang" data-zh="地址：中国浙江省绍兴市柯桥区福全街道富强工业园区外贸楼A301" data-en="Address: Room A301, Foreign Trade Building, Fuqiang Industrial Park, Fuquan Sub-district, Keqiao District, Shaoxing City, Zhejiang Province, China">地址：中国浙江省绍兴市柯桥区福全街道富强工业园区外贸楼A301</p>
+    </div>
+  </section>
+  <div id="footer-placeholder"></div>
 </body>
-</html>
+<script>
+  // 加载footer
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    });
+</script>
+</html> 

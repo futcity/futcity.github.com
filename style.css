@@ -1,0 +1,205 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f8f8;
+  color: #222;
+}
+header {
+  background: #1a237e;
+  color: #fff;
+  padding: 0.5rem 0;
+}
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+.logo .en {
+  font-size: 0.9rem;
+  color: #c5cae9;
+}
+nav {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+nav a:hover {
+  color: #ffb300;
+}
+nav select {
+  margin-left: 0.5rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  border: none;
+}
+.hero {
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.carousel {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+.carousel img {
+  width: 100vw;
+  height: 350px;
+  object-fit: cover;
+  position: absolute;
+  left: 0; top: 0;
+  transition: opacity 0.8s;
+}
+.hero-text {
+  position: relative;
+  z-index: 2;
+  background: rgba(255,255,255,0.85);
+  padding: 2rem;
+  margin-left: 5vw;
+  border-radius: 10px;
+  max-width: 400px;
+}
+.hero-text h1 {
+  margin: 0 0 1rem 0;
+  font-size: 2rem;
+  color: #1a237e;
+}
+.hero-text p {
+  margin-bottom: 1.5rem;
+}
+.btn {
+  display: inline-block;
+  background: #1a237e;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.btn:hover {
+  background: #3949ab;
+}
+.about, .contact, .products {
+  padding: 2.5rem 0;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.about h2, .contact h2, .products h2 {
+  color: #1a237e;
+  margin-bottom: 1rem;
+}
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1100px;
+}
+.product {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 1.2rem;
+  width: 220px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  transition: box-shadow 0.2s;
+}
+.product:hover {
+  box-shadow: 0 4px 16px rgba(26,35,126,0.13);
+}
+.product img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+.product h3 {
+  margin: 0.5rem 0 0.7rem 0;
+  color: #3949ab;
+}
+footer {
+  background: #1a237e;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+@media (max-width: 1000px) {
+  .product-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .product-list {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 800px) {
+  .hero-text {
+    margin-left: 0;
+    max-width: 90vw;
+  }
+  .carousel img {
+    height: 220px;
+  }
+  .hero {
+    min-height: 220px;
+  }
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+.pagination button {
+  padding: 0.5rem 1rem;
+  border: 2px solid #1a237e;
+  background: #fff;
+  color: #1a237e;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  min-width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pagination button:hover {
+  background: #1a237e;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(26,35,126,0.3);
+}
+.pagination button.active {
+  background: #1a237e;
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(26,35,126,0.2);
+} 
